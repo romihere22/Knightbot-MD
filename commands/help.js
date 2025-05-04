@@ -31,17 +31,8 @@ async function helpCommand(sock, chatId, channelLink) {
 ║ ➤ .groupinfo
 ║ ➤ .staff or .admins 
 ║ ➤ .vv
-╚═══════════════════╝
-
-╔═══════════════════╗
-🎨 *Image/Sticker Commands*:
-║ ➤ .blur <image>
-║ ➤ .simage <reply to sticker>
-║ ➤ .sticker <reply to image>
-║ ➤ .meme
-║ ➤ .take <packname> 
-║ ➤ .emojimix <emj1>+<emj2>
-╚═══════════════════╝   
+║ ➤ .pair or .rent
+╚═══════════════════╝ 
 
 ╔═══════════════════╗
 🛠️ *Admin Commands*:
@@ -68,16 +59,21 @@ async function helpCommand(sock, chatId, channelLink) {
 ║ ➤ .mode
 ║ ➤ .autostatus
 ║ ➤ .clearsession
+║ ➤ .antidelete
+║ ➤ .cleartmp
+║ ➤ .setpp <reply to image>
 ╚═══════════════════╝
 
 ╔═══════════════════╗
-🔗 *Github Commands:*
-║ ➤ .git
-║ ➤ .github
-║ ➤ .sc
-║ ➤ .script
-║ ➤ .repo
-╚═══════════════════╝
+🎨 *Image/Sticker Commands*:
+║ ➤ .blur <image>
+║ ➤ .simage <reply to sticker>
+║ ➤ .sticker <reply to image>
+║ ➤ .tgsticker <Link>
+║ ➤ .meme
+║ ➤ .take <packname> 
+║ ➤ .emojimix <emj1>+<emj2>
+╚═══════════════════╝  
 
 ╔═══════════════════╗
 🎮 *Game Commands*:
@@ -91,6 +87,12 @@ async function helpCommand(sock, chatId, channelLink) {
 ╚═══════════════════╝
 
 ╔═══════════════════╗
+🤖 *AI Commands*:
+║ ➤ .gpt <question>
+║ ➤ .gemini <question>
+╚═══════════════════╝
+
+╔═══════════════════╗
 🎯 *Fun Commands*:
 ║ ➤ .compliment @user
 ║ ➤ .insult @user
@@ -98,12 +100,48 @@ async function helpCommand(sock, chatId, channelLink) {
 ║ ➤ .character @user
 ║ ➤ .wasted @user
 ║ ➤ .ship @user
+║ ➤ .simp @user
+║ ➤ .stupid @user [text]
+╚═══════════════════╝
+
+╔═══════════════════╗
+🎯 *Textmaker*:
+║ ➤ .metallic <text>
+║ ➤ .ice <text>
+║ ➤ .snow <text>
+║ ➤ .impressive <text>
+║ ➤ .matrix <text>
+║ ➤ .light <text>
+║ ➤ .neon <text>
+║ ➤ .devil <text>
+║ ➤ .purple <text>
+║ ➤ .thunder <text>
+║ ➤ .leaves <text>
+║ ➤ .1917 <text>
+║ ➤ .arena <text>
+║ ➤ .hacker <text>
+║ ➤ .sand <text>
+║ ➤ .blackpink <text>
+║ ➤ .glitch <text>
+║ ➤ .fire <text>
 ╚═══════════════════╝
 
 ╔═══════════════════╗
 🎯 *Downloader*:
 ║ ➤ .play <song_name>
 ║ ➤ .song <song_name>
+║ ➤ .instagram <link>
+║ ➤ .facebook <link>
+║ ➤ .tiktok <link>
+╚═══════════════════╝
+
+╔═══════════════════╗
+🔗 *Github Commands:*
+║ ➤ .git
+║ ➤ .github
+║ ➤ .sc
+║ ➤ .script
+║ ➤ .repo
 ╚═══════════════════╝
 
 Join our channel for updates:`;
@@ -118,7 +156,7 @@ Join our channel for updates:`;
                 image: imageBuffer,
                 caption: helpMessage,
                 contextInfo: {
-                    forwardingScore: 999,
+                    forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363161513685998@newsletter',
@@ -132,7 +170,7 @@ Join our channel for updates:`;
             await sock.sendMessage(chatId, { 
                 text: helpMessage,
                 contextInfo: {
-                    forwardingScore: 999,
+                    forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363161513685998@newsletter',
